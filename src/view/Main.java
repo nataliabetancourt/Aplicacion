@@ -99,15 +99,6 @@ public class Main extends PApplet{
 			break;
 		}*/
 		
-		if (screen == 0) {
-			intro.draw();
-		}
-		
-		if (screen == 3) {
-
-			home.draw();
-		}
-		
 	}
 	
 	public void mousePressed() {
