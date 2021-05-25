@@ -14,7 +14,8 @@ public class SignUpScreen {
 	private PImage signup;
 	private PFont font;
 	private SignUpController controller;
-	private String username, password, email, number;
+	private boolean box1, box2, box3, box4, boxesFilled;
+	private String noFill;
 
 	public SignUpScreen(PApplet app, ControlP5 cp5) {
 		this.app = app;
@@ -28,15 +29,23 @@ public class SignUpScreen {
 		
 		//Controller
 		controller = new SignUpController(app);
+		
+		//Variables
+		box1 = true;
+		box2 = true;
+		box3 = true;
+		box4 = true;
+		boxesFilled = false;
+		noFill = "";
 
 		textBoxes();
-		
-
-		
+	
 	}
 	
 	public void draw() {
 		app.image(signup, 0, 0, 323, 700);
+		
+		fillConfirmation();
 	}
 
 	public void textBoxes() {
@@ -79,7 +88,22 @@ public class SignUpScreen {
 									cp5.get(Textfield.class, "number").getText());
 	}
 	
+	public void fillConfirmation() {
+		box1 = (!noFill.equals(cp5.get(Textfield.class, "usernameNew").getText()));
+		box2 = (!noFill.equals(cp5.get(Textfield.class, "passwordNew").getText()));
+		box3 = (!noFill.equals(cp5.get(Textfield.class, "email").getText()));
+		box4 = (!noFill.equals(cp5.get(Textfield.class, "number").getText()));
+		
+		if (box1 && box2 && box3 && box4) {
+			boxesFilled = true;
+		}
+	}
+	
 	public SignUpController getController() {
 		return controller;
+	}
+	
+	public boolean isBoxesFilled() {
+		return boxesFilled;
 	}
 }

@@ -57,4 +57,9 @@ public class LoginScreen {
 		cp5.get(Textfield.class, "username").hide();
 		cp5.get(Textfield.class, "password").hide();
 	}
+	
+	public void validateLogin() {
+		
+
+	}
 }

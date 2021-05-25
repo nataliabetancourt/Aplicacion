@@ -273,11 +273,12 @@ public class Main extends PApplet{
 			break;
 		//Sign up screen
 		case 2:
-			if (mouseX > 100 && mouseX < 225 && mouseY > 578 && mouseY < 617) {
-				signup.addUser();
-				screen = 1;
+			if (signup.isBoxesFilled()) {
+				if (mouseX > 100 && mouseX < 225 && mouseY > 578 && mouseY < 617) {
+					signup.addUser();
+					screen = 1;
+				}
 			}
-			//createButton(100, 225, 578, 617, 1);
 			
 			
 			
