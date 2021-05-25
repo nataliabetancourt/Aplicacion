@@ -30,7 +30,6 @@ public class LoginScreen {
 	public void draw() {
 		app.image(login, 0, 0, 323, 700);
 		app.textFont(font);
-		//app.text(cp5.get(Textfield.class, "username").getText(), 248, 35);
 	}
 	
 	public void textBoxes() {
@@ -55,4 +54,8 @@ public class LoginScreen {
 		.hide();
 	}
 	
+	public void hideText() {
+		cp5.get(Textfield.class, "username").hide();
+		cp5.get(Textfield.class, "password").hide();
+	}
 }

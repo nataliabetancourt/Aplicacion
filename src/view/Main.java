@@ -171,7 +171,7 @@ public class Main extends PApplet{
 			break;
 		//Sign up screen
 		case 2:
-			
+			login.hideText();
 			
 			
 			
@@ -179,6 +179,7 @@ public class Main extends PApplet{
 			break;
 		//Home screen
 		case 3:
+			login.hideText();
 			home.draw();
 			break;
 		//Dish one screen - PASTA
@@ -262,8 +263,8 @@ public class Main extends PApplet{
 			break;
 		//Login screen
 		case 1:
-			
-			
+			createButton(96, 221, 505, 545, 3);
+			createButton(114, 207, 624, 650, 3);
 			
 			
 			
