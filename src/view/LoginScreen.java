@@ -1,5 +1,7 @@
 package view;
 
+import java.util.ArrayList;
+
 import controlP5.ControlP5;
 import controlP5.Textfield;
 import processing.core.PApplet;
@@ -12,7 +14,7 @@ public class LoginScreen {
 	private ControlP5 cp5;
 	private PImage login;
 	private PFont font;
-	private boolean box1, box2, boxesFilled;
+	private boolean box1, box2, boxesFilled, matchUsername, matchPassword, matchUser;
 	private String noFill;
 
 	public LoginScreen(PApplet app, ControlP5 cp5) {
@@ -26,9 +28,9 @@ public class LoginScreen {
 		font = app.createFont("./data/fonts/Poppins-Regular.ttf", 14);
 		
 		//Variables 
-		box1 = true;
-		box2 = true;
-		boxesFilled = false;
+		box1 = true;							matchUsername = false;
+		box2 = true;							matchPassword = false;
+		boxesFilled = false;				matchUser = false;
 		noFill = "";
 		
 		textBoxes();
@@ -77,12 +79,21 @@ public class LoginScreen {
 		}
 	}
 	
-	public void validateLogin() {
+	public void validateLogin(String user, String password) {
+		matchUsername = user.equals(cp5.get(Textfield.class, "username").getText());
+		matchPassword = user.equals(cp5.get(Textfield.class, "password").getText());
 		
+		if (matchUsername && matchPassword) {
+			matchUser = true;
+		}
 
 	}
 	
 	public boolean isBoxesFilled() {
 		return boxesFilled;
+	}
+	
+	public boolean isMatchPassword() {
+		return matchPassword;
 	}
 }

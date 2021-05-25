@@ -263,8 +263,15 @@ public class Main extends PApplet{
 		case 1:
 			//Login button - goes to home
 			if (login.isBoxesFilled()) {
-				if (mouseX > 96 && mouseX < 221 && mouseY > 505 && mouseY < 545) {
-					screen = 3;
+				for (int i = 0; i <signup.getController().getUsers().size(); i++) {
+					String username = signup.getController().getUsers().get(i).getUsername();
+					String password = signup.getController().getUsers().get(i).getPassword();
+					login.validateLogin(username, password);
+				}
+				if (login.isMatchPassword()) {
+					if (mouseX > 96 && mouseX < 221 && mouseY > 505 && mouseY < 545) {
+						screen = 3;
+					}
 				}
 			}
 			//Signup button - goes to sign up
