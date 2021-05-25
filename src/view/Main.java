@@ -363,8 +363,8 @@ public class Main extends PApplet{
 			break;
 		//Feedback screen
 		case 9:
-		createButton(16,39,36,57,3); //back
-			
+		createButton(16,39,36,57,8); //back
+		createButton(157,279,639,673,10); //history (user screen)	
 			
 			
 			
