@@ -86,7 +86,7 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-
+    private int click;
 	
 	
 	
@@ -146,7 +146,7 @@ public class Main extends PApplet{
 		
 		//Variables
 		screen = 0;
-		
+		click = 0;
 		
 		
 		
@@ -331,7 +331,7 @@ public class Main extends PApplet{
 		case 6:
 		createButton(16,39,36,57,3); //back
 		createButton(179,288,640,665,8); //checkout	
-			
+		click=3;	
 			
 			
 			
@@ -342,7 +342,7 @@ public class Main extends PApplet{
 		case 7:
 		createButton(16,39,36,57,3); //back	
 		createButton(179,288,640,665,8); //checkout	
-			
+		click=4;	
 			
 			
 			
@@ -351,15 +351,15 @@ public class Main extends PApplet{
 			break;
 		//Payment screen
 		case 8:
-		createButton(16,39,36,57,3); //back	
+		if (click == 3) {
+			createButton(16,39,36,57,6); //back		
+		}	
+			
+		if (click == 4) {	
+			createButton(16,39,36,57,7); //back	
+		}	
+			
 		createButton(99,222,636,671,9); //finish	
-			
-			
-			
-			
-			
-			
-			
 			break;
 		//Feedback screen
 		case 9:
