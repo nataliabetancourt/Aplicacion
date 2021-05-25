@@ -21,7 +21,7 @@ public class Main extends PApplet{
 	
 	
 	//Signup
-	
+	private SignUpScreen signup;
 	
 	
 	
@@ -86,8 +86,8 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-	
-	
+	private boolean introClick, loginClick, signUpClick, homeClick;
+	private boolean dishOneClick, dishTwoClick, dishThreeClick, dishFourClick, userClick, payClick, feedbackClick;
 	
 	
 	
@@ -118,6 +118,7 @@ public class Main extends PApplet{
 		intro = new IntroScreen(this);
 		home = new HomeScreen(this);
 		login = new LoginScreen(this, cp5);
+		signup = new SignUpScreen(this, cp5);
 		
 		
 		
@@ -139,7 +140,9 @@ public class Main extends PApplet{
 		
 		//Variables
 		screen = 0;
-		
+		introClick = false;
+		loginClick = false;
+		signUpClick = false;
 		
 		
 		
@@ -149,7 +152,7 @@ public class Main extends PApplet{
 	@Override
 	public void draw() {
 		background(255);
-		
+
 		//Screens
 		switch (screen) {
 		//Intro screen
@@ -171,7 +174,7 @@ public class Main extends PApplet{
 			break;
 		//Sign up screen
 		case 2:
-			login.hideText();
+			signup.draw();
 			
 			
 			
@@ -263,17 +266,19 @@ public class Main extends PApplet{
 			break;
 		//Login screen
 		case 1:
+			//Login button - goes to home
 			createButton(96, 221, 505, 545, 3);
-			createButton(114, 207, 624, 650, 3);
+			//Signup button - goes to sign up
+			createButton(114, 207, 624, 650, 2);
 			
-			
+
 			
 			
 			
 			break;
 		//Sign up screen
 		case 2:
-			
+			createButton(100, 225, 578, 617, 1);
 			
 			
 			
@@ -383,6 +388,7 @@ public class Main extends PApplet{
 		if (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2) {
 			screen = screenNum;
 		}
+	
 	}
 
 }

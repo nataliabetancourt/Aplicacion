@@ -29,7 +29,6 @@ public class LoginScreen {
 
 	public void draw() {
 		app.image(login, 0, 0, 323, 700);
-		app.textFont(font);
 	}
 	
 	public void textBoxes() {
