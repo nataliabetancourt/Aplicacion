@@ -1,7 +1,5 @@
 package view;
 
-import controlP5.ControlP5;
-import controlP5.Textfield;
 import processing.core.PApplet;
 import processing.core.PImage;
 
