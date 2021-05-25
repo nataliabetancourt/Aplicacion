@@ -10,8 +10,8 @@ public class DishFourScreen extends Dish{
 	private PApplet app;
 	private PImage CANNOLIS;
 
-	public DishFourScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
-			super(app, cp5, checkbox);
+	public DishFourScreen(PApplet app) {
+			super(app);
 			
 			this.app = app;
 			//Image

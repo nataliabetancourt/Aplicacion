@@ -122,10 +122,10 @@ public class Main extends PApplet{
 		
 		
 		
-		ravioli = new DishThreeScreen(this,cp5,checkbox);
-		cannolis = new DishFourScreen(this,cp5,checkbox);
-		payment = new PaymentScreen(this,cp5,checkbox);
-		feedback = new FeedbackScreen(this,cp5,checkbox);
+		ravioli = new DishThreeScreen(this);
+		cannolis = new DishFourScreen(this);
+		payment = new PaymentScreen(this);
+		feedback = new FeedbackScreen(this);
 		
 		
 		
@@ -257,7 +257,7 @@ public class Main extends PApplet{
 			
 			break;
 		}
-		
+		System.out.println(mouseX + "," + mouseY);
 	}
 	
 	public void mousePressed() {
@@ -329,8 +329,8 @@ public class Main extends PApplet{
 			break;
 		//Dish three screen - RAVIOLI
 		case 6:
-			
-			
+		createButton(16,39,36,57,3);	
+		createButton(179,288,640,665,8);	
 			
 			
 			
@@ -340,8 +340,8 @@ public class Main extends PApplet{
 			break;
 		//Dish four screen - CANNOLIS
 		case 7:
-			
-			
+		createButton(16,39,36,57,3);	
+		createButton(179,288,640,665,8);	
 			
 			
 			

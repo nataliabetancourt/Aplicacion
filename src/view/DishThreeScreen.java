@@ -10,8 +10,8 @@ public class DishThreeScreen extends Dish{
 	private PApplet app;
 	private PImage RAVIOLI;
 
-	public DishThreeScreen (PApplet app,ControlP5 cp5, CheckBox checkbox) {
-		super(app, cp5, checkbox);
+	public DishThreeScreen (PApplet app) {
+		super(app);
 		
 		this.app = app;
 		//Image

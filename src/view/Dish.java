@@ -12,10 +12,8 @@ public class Dish {
 	private CheckBox checkbox;
 	private float basicPrice, extra1, extra2, extra3, total;
 	
-	public Dish(PApplet app, ControlP5 cp5, CheckBox checkbox) {
+	public Dish(PApplet app) {
 		this.app = app;
-		this.cp5 = cp5;
-		this.checkbox = checkbox;
 		
 	}
 
