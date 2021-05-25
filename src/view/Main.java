@@ -1,5 +1,6 @@
 package view;
 
+import controlP5.Button;
 import controlP5.CheckBox;
 import controlP5.ControlP5;
 import processing.core.PApplet;
@@ -52,7 +53,7 @@ public class Main extends PApplet{
 	public void draw() {
 		
 		//Screens
-		/*switch (screen) {
+		switch (screen) {
 		//Intro screen
 		case 0:
 			intro.draw();
@@ -97,67 +98,12 @@ public class Main extends PApplet{
 		case 10:
 			
 			break;
-		}*/
+		}
 		
 	}
 	
 	public void mousePressed() {
-		//Switch screen
-		if (intro.clickScreen(screen)) {
-			screen = 3;
-		}
-		
-		
-		//Screens
-		switch (screen) {
-		//Intro screen
-		case 0:
-			
-			break;
-		//Login screen
-		case 1:
-			
-			break;
-		//Sign up screen
-		case 2:
-			
-			break;
-		//Home screen
-		case 3:
-			home.draw();
-			break;
-		//Dish one screen
-		case 4:
-			
-			break;
-		//Dish two screen
-		case 5:
-			
-			break;
-		//Dish three screen
-		case 6:
-			
-			break;
-		//Dish four screen
-		case 7:
-			
-			break;
-		//Payment screen
-		case 8:
-			
-			break;
-		//Feedback screen
-		case 9:
-			
-			break;
-		//User screen
-		case 10:
-			
-			break;
-		}
 
 	}
 
-	
-	
 }
