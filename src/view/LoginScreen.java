@@ -68,6 +68,13 @@ public class LoginScreen {
 	public void hideText() {
 		cp5.get(Textfield.class, "username").hide();
 		cp5.get(Textfield.class, "password").hide();
+		cp5.get(Textfield.class, "username").clear();
+		cp5.get(Textfield.class, "password").clear();
+	}
+	
+	public void showText() {
+		cp5.get(Textfield.class, "username").show();
+		cp5.get(Textfield.class, "password").show();
 	}
 	
 	public void fillConfirmation() {

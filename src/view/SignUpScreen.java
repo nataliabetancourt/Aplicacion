@@ -75,10 +75,24 @@ public class SignUpScreen {
 	}
 	
 	public void hideText() {
+		//This hides the text when the screen changes
 		cp5.get(Textfield.class, "usernameNew").hide();
 		cp5.get(Textfield.class, "passwordNew").hide();
 		cp5.get(Textfield.class, "number").hide();
 		cp5.get(Textfield.class, "email").hide();
+		
+		//And then it erases it, in case the person returns to the screen
+		cp5.get(Textfield.class, "usernameNew").clear();
+		cp5.get(Textfield.class, "passwordNew").clear();
+		cp5.get(Textfield.class, "number").clear();
+		cp5.get(Textfield.class, "email").clear();
+	}
+	
+	public void showText() {
+		cp5.get(Textfield.class, "usernameNew").show();
+		cp5.get(Textfield.class, "passwordNew").show();
+		cp5.get(Textfield.class, "number").show();
+		cp5.get(Textfield.class, "email").show();
 	}
 	
 	public void addUser(){

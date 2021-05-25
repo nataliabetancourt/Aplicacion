@@ -177,7 +177,6 @@ public class Main extends PApplet{
 			break;
 		//Home screen
 		case 3:
-			login.hideText();
 			home.draw();
 			break;
 		//Dish one screen - PASTA
@@ -259,9 +258,11 @@ public class Main extends PApplet{
 		case 0:
 			createButton(0, 323, 0, 700, 1);
 			break;
+			
 		//Login screen
 		case 1:
 			//Login button - goes to home
+			login.showText();
 			if (login.isBoxesFilled()) {
 				for (int i = 0; i <signup.getController().getUsers().size(); i++) {
 					String username = signup.getController().getUsers().get(i).getUsername();
@@ -271,32 +272,30 @@ public class Main extends PApplet{
 				if (login.isMatchPassword()) {
 					if (mouseX > 96 && mouseX < 221 && mouseY > 505 && mouseY < 545) {
 						screen = 3;
+						login.hideText();
 					}
 				}
 			}
-			//Signup button - goes to sign up
-			createButton(114, 207, 624, 650, 2);
 			
+			//Sign up button - goes to sign up
+			if (mouseX > 114 && mouseX < 207 && mouseY > 624 && mouseY < 650) {
+				screen = 2;
+				login.hideText();
+			}
 
-			
-			
-			
 			break;
+			
 		//Sign up screen
 		case 2:
+			signup.showText();
 			if (signup.isBoxesFilled()) {
 				if (mouseX > 100 && mouseX < 225 && mouseY > 578 && mouseY < 617) {
 					signup.addUser();
 					screen = 1;
+					signup.hideText();
 				}
 			}
-			
-			
-			
-			
-			
-			
-			
+
 			break;
 		//Home screen
 		case 3:
