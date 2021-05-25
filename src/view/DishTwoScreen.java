@@ -11,6 +11,11 @@ public class DishTwoScreen extends Dish{
 
 	public DishTwoScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
 			super(app, cp5, checkbox);
+			
+			dishTwo = app.loadImage("./data/images//DISH pizza.png");
+			
+	}
+			
 	}
 
-}
+

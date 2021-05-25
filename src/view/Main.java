@@ -15,13 +15,13 @@ public class Main extends PApplet{
 	private HomeScreen home;
 	private IntroScreen intro;
 	//Login
-	
+	private LoginScreen login;
 	
 	
 	
 	
 	//Signup
-	
+	private SignUpScreen signup;
 	
 	
 	
@@ -118,7 +118,8 @@ public class Main extends PApplet{
 		//View screens
 		intro = new IntroScreen(this);
 		home = new HomeScreen(this);
-		
+		login = new LoginScreen(this, cp5);
+		signup = new SignUpScreen(this, cp5);
 		
 		
 		
@@ -149,15 +150,13 @@ public class Main extends PApplet{
 		click = 0;
 		
 		
-		
-		
 	
 	}
 	
 	@Override
 	public void draw() {
 		background(255);
-		
+
 		//Screens
 		switch (screen) {
 		//Intro screen
@@ -170,7 +169,7 @@ public class Main extends PApplet{
 			break;
 		//Login screen
 		case 1:
-			
+			login.draw();
 			
 			
 			
@@ -179,7 +178,7 @@ public class Main extends PApplet{
 			break;
 		//Sign up screen
 		case 2:
-			
+			signup.draw();
 			
 			
 			
@@ -266,28 +265,46 @@ public class Main extends PApplet{
 		switch (screen) {
 		//Intro screen
 		case 0:
-			createButton(0, 323, 0, 700, 3);
+			createButton(0, 323, 0, 700, 1);
 			break;
+			
 		//Login screen
 		case 1:
+			//Login button - goes to home
+			login.showText();
+			if (login.isBoxesFilled()) {
+				for (int i = 0; i <signup.getController().getUsers().size(); i++) {
+					String username = signup.getController().getUsers().get(i).getUsername();
+					String password = signup.getController().getUsers().get(i).getPassword();
+					login.validateLogin(username, password);
+				}
+				if (login.isMatchPassword()) {
+					if (mouseX > 96 && mouseX < 221 && mouseY > 505 && mouseY < 545) {
+						screen = 3;
+						login.hideText();
+					}
+				}
+			}
 			
-			
-			
-			
-			
-			
-			
+			//Sign up button - goes to sign up
+			if (mouseX > 114 && mouseX < 207 && mouseY > 624 && mouseY < 650) {
+				screen = 2;
+				login.hideText();
+			}
+
 			break;
+			
 		//Sign up screen
 		case 2:
-			
-			
-			
-			
-			
-			
-			
-			
+			signup.showText();
+			if (signup.isBoxesFilled()) {
+				if (mouseX > 100 && mouseX < 225 && mouseY > 578 && mouseY < 617) {
+					signup.addUser();
+					screen = 1;
+					signup.hideText();
+				}
+			}
+
 			break;
 		//Home screen
 		case 3:
