@@ -262,7 +262,11 @@ public class Main extends PApplet{
 		//Login screen
 		case 1:
 			//Login button - goes to home
-			createButton(96, 221, 505, 545, 3);
+			if (login.isBoxesFilled()) {
+				if (mouseX > 96 && mouseX < 221 && mouseY > 505 && mouseY < 545) {
+					screen = 3;
+				}
+			}
 			//Signup button - goes to sign up
 			createButton(114, 207, 624, 650, 2);
 			

@@ -12,6 +12,8 @@ public class LoginScreen {
 	private ControlP5 cp5;
 	private PImage login;
 	private PFont font;
+	private boolean box1, box2, boxesFilled;
+	private String noFill;
 
 	public LoginScreen(PApplet app, ControlP5 cp5) {
 		this.app = app;
@@ -23,12 +25,20 @@ public class LoginScreen {
 		//Fonts
 		font = app.createFont("./data/fonts/Poppins-Regular.ttf", 14);
 		
+		//Variables 
+		box1 = true;
+		box2 = true;
+		boxesFilled = false;
+		noFill = "";
+		
 		textBoxes();
 		
 	}
 
 	public void draw() {
 		app.image(login, 0, 0, 323, 700);
+		
+		fillConfirmation();
 	}
 	
 	public void textBoxes() {
@@ -58,8 +68,21 @@ public class LoginScreen {
 		cp5.get(Textfield.class, "password").hide();
 	}
 	
+	public void fillConfirmation() {
+		box1 = (!noFill.equals(cp5.get(Textfield.class, "username").getText()));
+		box2 = (!noFill.equals(cp5.get(Textfield.class, "password").getText()));
+		
+		if (box1 && box2) {
+			boxesFilled = true;
+		}
+	}
+	
 	public void validateLogin() {
 		
 
+	}
+	
+	public boolean isBoxesFilled() {
+		return boxesFilled;
 	}
 }
