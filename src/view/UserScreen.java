@@ -16,7 +16,7 @@ public class UserScreen {
 		this.cp5 = cp5;
 		
 		//Image
-		user = app.loadImage("./data/Home.jpg");
+		user = app.loadImage("./data/USER SCREEN.jpg");
 		
 	}
 
