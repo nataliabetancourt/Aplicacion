@@ -86,8 +86,6 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-	private boolean introClick, loginClick, signUpClick, homeClick;
-	private boolean dishOneClick, dishTwoClick, dishThreeClick, dishFourClick, userClick, payClick, feedbackClick;
 	
 	
 	
@@ -140,9 +138,6 @@ public class Main extends PApplet{
 		
 		//Variables
 		screen = 0;
-		introClick = false;
-		loginClick = false;
-		signUpClick = false;
 		
 		
 		
@@ -278,7 +273,11 @@ public class Main extends PApplet{
 			break;
 		//Sign up screen
 		case 2:
-			createButton(100, 225, 578, 617, 1);
+			if (mouseX > 100 && mouseX < 225 && mouseY > 578 && mouseY < 617) {
+				signup.addUser();
+				screen = 1;
+			}
+			//createButton(100, 225, 578, 617, 1);
 			
 			
 			
@@ -388,7 +387,6 @@ public class Main extends PApplet{
 		if (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2) {
 			screen = screenNum;
 		}
-	
 	}
 
 }

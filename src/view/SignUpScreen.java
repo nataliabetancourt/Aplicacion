@@ -2,6 +2,7 @@ package view;
 
 import controlP5.ControlP5;
 import controlP5.Textfield;
+import controller.SignUpController;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -12,6 +13,8 @@ public class SignUpScreen {
 	private ControlP5 cp5;
 	private PImage signup;
 	private PFont font;
+	private SignUpController controller;
+	private String username, password, email, number;
 
 	public SignUpScreen(PApplet app, ControlP5 cp5) {
 		this.app = app;
@@ -22,8 +25,13 @@ public class SignUpScreen {
 		
 		//Fonts
 		font = app.createFont("./data/fonts/Poppins-Regular.ttf", 14);
+		
+		//Controller
+		controller = new SignUpController(app);
 
 		textBoxes();
+		
+
 		
 	}
 	
@@ -64,4 +72,14 @@ public class SignUpScreen {
 		cp5.get(Textfield.class, "email").hide();
 	}
 	
+	public void addUser(){
+		controller.addUser(cp5.get(Textfield.class, "usernameNew").getText(), 
+									cp5.get(Textfield.class, "passwordNew").getText(), 
+									cp5.get(Textfield.class, "email").getText(),
+									cp5.get(Textfield.class, "number").getText());
+	}
+	
+	public SignUpController getController() {
+		return controller;
+	}
 }
