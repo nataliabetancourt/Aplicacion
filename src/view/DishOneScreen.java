@@ -7,12 +7,18 @@ import processing.core.PImage;
 
 public class DishOneScreen extends Dish{
 	
-	private PImage dishOne;
+	private PImage pasta;
 
-	public DishOneScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
-			super(app, cp5, checkbox);
+	public DishOneScreen(PApplet app) {
+			super(app);
 			
-			dishOne = app.loadImage("./data/images//DISH pasta.jpg");
+			//Images
+			pasta = app.loadImage("./data/images/pasta.jpg");
 	}
 
+	public void draw() {
+		app.image(pasta, 0, 0, 323, 700);
+
+	}
+	
 }

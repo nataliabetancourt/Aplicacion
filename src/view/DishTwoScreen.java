@@ -7,15 +7,20 @@ import processing.core.PImage;
 
 public class DishTwoScreen extends Dish{
 
-	private PImage dishTwo;
+	private PImage pizza;
 
-	public DishTwoScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
-			super(app, cp5, checkbox);
+	public DishTwoScreen(PApplet app) {
+			super(app);
 			
-			dishTwo = app.loadImage("./data/images//DISH pizza.png");
-			
-	}
+			pizza = app.loadImage("./data/images/pizza.jpg");
 			
 	}
+			
+	public void draw() {
+		app.image(pizza, 0, 0, 323, 700);
+
+	}
+	
+}
 
 
