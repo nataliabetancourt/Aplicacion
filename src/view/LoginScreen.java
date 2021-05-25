@@ -5,7 +5,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class LoginScreen {
-	
+
 	private PApplet app;
 	private ControlP5 cp5;
 	private PImage login;
@@ -13,14 +13,13 @@ public class LoginScreen {
 	public LoginScreen(PApplet app, ControlP5 cp5) {
 		this.app = app;
 		this.cp5 = cp5;
-		
-		//Image
+
+		// Image
 		login = app.loadImage("./data/images/login.jpg");
 	}
-	
-	public void draw() {
-		
 
+	public void draw() {
+		app.image(login, 0, 0);
 	}
 
 }

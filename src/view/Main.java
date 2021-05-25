@@ -296,7 +296,7 @@ public class Main extends PApplet{
 			//Cannolis button
 			createButton(170, 294, 466, 641, 7);
 			break;
-		//Dish one screen
+		//Dish one screen - PASTA
 		case 4:
 			
 			
@@ -309,7 +309,7 @@ public class Main extends PApplet{
 			
 			
 			break;
-		//Dish two screen
+		//Dish two screen - PIZZA
 		case 5:
 			
 			
@@ -321,7 +321,7 @@ public class Main extends PApplet{
 			
 			
 			break;
-		//Dish three screen
+		//Dish three screen - RAVIOLI
 		case 6:
 			
 			
@@ -332,7 +332,7 @@ public class Main extends PApplet{
 			
 			
 			break;
-		//Dish four screen
+		//Dish four screen - CANNOLIS
 		case 7:
 			
 			
