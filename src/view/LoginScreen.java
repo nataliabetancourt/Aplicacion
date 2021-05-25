@@ -88,7 +88,7 @@ public class LoginScreen {
 	
 	public void validateLogin(String user, String password) {
 		matchUsername = user.equals(cp5.get(Textfield.class, "username").getText());
-		matchPassword = user.equals(cp5.get(Textfield.class, "password").getText());
+		matchPassword = password.equals(cp5.get(Textfield.class, "password").getText());
 		
 		if (matchUsername && matchPassword) {
 			matchUser = true;
