@@ -13,7 +13,7 @@ public class HomeScreen {
 		
 		//Image
 		home = app.loadImage("./data/images/Home.jpg");
-		
+
 	}
 	
 	public void draw() {

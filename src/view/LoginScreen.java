@@ -15,7 +15,12 @@ public class LoginScreen {
 		this.cp5 = cp5;
 		
 		//Image
-		login = app.loadImage("./data/Home.jpg");
+		login = app.loadImage("./data/images/login.jpg");
+	}
+	
+	public void draw() {
+		
+
 	}
 
 }
