@@ -11,6 +11,8 @@ public class DishOneScreen extends Dish{
 
 	public DishOneScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
 			super(app, cp5, checkbox);
+			
+			dishOne = app.loadImage("./data/images//DISH pasta.jpg");
 	}
 
 }
