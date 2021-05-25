@@ -329,8 +329,8 @@ public class Main extends PApplet{
 			break;
 		//Dish three screen - RAVIOLI
 		case 6:
-		createButton(16,39,36,57,3);	
-		createButton(179,288,640,665,8);	
+		createButton(16,39,36,57,3); //back
+		createButton(179,288,640,665,8); //checkout	
 			
 			
 			
@@ -340,8 +340,8 @@ public class Main extends PApplet{
 			break;
 		//Dish four screen - CANNOLIS
 		case 7:
-		createButton(16,39,36,57,3);	
-		createButton(179,288,640,665,8);	
+		createButton(16,39,36,57,3); //back	
+		createButton(179,288,640,665,8); //checkout	
 			
 			
 			
@@ -351,8 +351,8 @@ public class Main extends PApplet{
 			break;
 		//Payment screen
 		case 8:
-			
-			
+		createButton(16,39,36,57,3); //back	
+		createButton(99,222,636,671,9); //finish	
 			
 			
 			
@@ -363,7 +363,7 @@ public class Main extends PApplet{
 			break;
 		//Feedback screen
 		case 9:
-			
+		createButton(16,39,36,57,3); //back
 			
 			
 			
