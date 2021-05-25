@@ -15,7 +15,7 @@ public class Main extends PApplet{
 	private HomeScreen home;
 	private IntroScreen intro;
 	//Login
-	
+	private LoginScreen login;
 	
 	
 	
@@ -86,7 +86,6 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-
 	
 	
 	
@@ -118,7 +117,7 @@ public class Main extends PApplet{
 		//View screens
 		intro = new IntroScreen(this);
 		home = new HomeScreen(this);
-		
+		login = new LoginScreen(this, cp5);
 		
 		
 		
@@ -144,7 +143,6 @@ public class Main extends PApplet{
 		
 		
 		
-		
 	
 	}
 	
@@ -164,7 +162,7 @@ public class Main extends PApplet{
 			break;
 		//Login screen
 		case 1:
-			
+			login.draw();
 			
 			
 			
@@ -260,7 +258,7 @@ public class Main extends PApplet{
 		switch (screen) {
 		//Intro screen
 		case 0:
-			createButton(0, 323, 0, 700, 3);
+			createButton(0, 323, 0, 700, 1);
 			break;
 		//Login screen
 		case 1:
