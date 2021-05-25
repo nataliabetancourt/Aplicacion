@@ -36,26 +36,26 @@ public class Main extends PApplet{
 	
 	
 	//Ravioli
-	
+	private DishThreeScreen ravioli;
 	
 	
 	
 	
 	//Cannolis
-	
+	private DishFourScreen cannolis;
 	
 	
 	
 	
 	//Payscreen
-	
+	private PaymentScreen payment;
 	
 	
 	
 	
 	
 	//Feedback
-	
+	private FeedbackScreen feedback;
 	
 	
 	
@@ -120,6 +120,12 @@ public class Main extends PApplet{
 		home = new HomeScreen(this);
 		
 		
+		
+		
+		ravioli = new DishThreeScreen(this,cp5,checkbox);
+		cannolis = new DishFourScreen(this,cp5,checkbox);
+		payment = new PaymentScreen(this,cp5,checkbox);
+		feedback = new FeedbackScreen(this,cp5,checkbox);
 		
 		
 		
@@ -203,7 +209,7 @@ public class Main extends PApplet{
 			break;
 		//Dish three screen - RAVIOLI
 		case 6:
-			
+			ravioli.drawRavioli();
 			
 			
 			
@@ -213,7 +219,7 @@ public class Main extends PApplet{
 			break;
 		//Dish four screen - CANNOLIS
 		case 7:
-			
+			cannolis.drawCannolis();
 			
 			
 			
@@ -223,7 +229,7 @@ public class Main extends PApplet{
 			break;
 		//Payment screen
 		case 8:
-			
+			payment.drawPayment();
 			
 			
 			
@@ -233,7 +239,7 @@ public class Main extends PApplet{
 			break;
 		//Feedback screen
 		case 9:
-			
+			feedback.drawFeedback();
 			
 			
 			
