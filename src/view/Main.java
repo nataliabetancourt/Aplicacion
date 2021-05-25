@@ -39,7 +39,7 @@ public class Main extends PApplet{
 		
 		//View screens
 		intro = new IntroScreen(this);
-		home = new HomeScreen(this, cp5);
+		home = new HomeScreen(this);
 		
 		//Controllers
 		
@@ -51,19 +51,33 @@ public class Main extends PApplet{
 	
 	@Override
 	public void draw() {
+		background(255);
 		
 		//Screens
 		switch (screen) {
 		//Intro screen
 		case 0:
 			intro.draw();
+			
+			
+			
+			
 			break;
 		//Login screen
 		case 1:
 			
+			
+			
+			
+			
+			
 			break;
 		//Sign up screen
 		case 2:
+			
+			
+			
+			
 			
 			break;
 		//Home screen
@@ -73,29 +87,68 @@ public class Main extends PApplet{
 		//Dish one screen
 		case 4:
 			
+			
+			
+			
+			
+			
 			break;
 		//Dish two screen
 		case 5:
+			
+			
+			
+			
+			
 			
 			break;
 		//Dish three screen
 		case 6:
 			
+			
+			
+			
+			
+			
+			
 			break;
 		//Dish four screen
 		case 7:
+			
+			
+			
+			
+			
+			
 			
 			break;
 		//Payment screen
 		case 8:
 			
+			
+			
+			
+			
+			
+			
 			break;
 		//Feedback screen
 		case 9:
 			
+			
+			
+			
+			
+			
+			
 			break;
 		//User screen
 		case 10:
+			
+			
+			
+			
+			
 			
 			break;
 		}
@@ -103,7 +156,136 @@ public class Main extends PApplet{
 	}
 	
 	public void mousePressed() {
-
+		
+		//Screens
+		switch (screen) {
+		//Intro screen
+		case 0:
+			createButton(0, 323, 0, 700, 3);
+			break;
+		//Login screen
+		case 1:
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Sign up screen
+		case 2:
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Home screen
+		case 3:
+			//User button
+			createButton(20, 65, 45, 90, 10);
+			//Pasta button
+			createButton(27, 151, 273, 448, 4);
+			//Pizza button
+			createButton(170, 294, 273, 448, 5);
+			//Ravioli button
+			createButton(27, 151, 466, 641, 6);
+			//Cannolis button
+			createButton(170, 294, 466, 641, 7);
+			break;
+		//Dish one screen
+		case 4:
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Dish two screen
+		case 5:
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Dish three screen
+		case 6:
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Dish four screen
+		case 7:
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Payment screen
+		case 8:
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//Feedback screen
+		case 9:
+			
+			
+			
+			
+			
+			
+			
+			break;
+		//User screen
+		case 10:
+			
+			
+			
+			
+			
+			
+			
+			
+			break;
+		}
+	
+	}
+	
+	public void createButton(int x1, int x2, int y1, int y2, int screenNum) {
+		if (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2) {
+			screen = screenNum;
+		}
 	}
 
 }
+

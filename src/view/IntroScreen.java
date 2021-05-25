@@ -20,9 +20,11 @@ public class IntroScreen {
 		app.image(intro, 0, 0, 323, 700);
 	}
 	
-	public boolean clickScreen(int screen) {
-		if (app.mouseX > 0 && app.mouseX < 323 && app.mouseY > 0 && app.mouseY < 700 && screen == 0) {}
-		return true;
+	public void clickScreen(int screen) {
+		if (app.mouseX > 0 && app.mouseX < 323 && app.mouseY > 0 && app.mouseY < 700 && screen == 0) {
+			screen = 3;
+			System.out.println("click");
+		}
 	}
 	
 }
