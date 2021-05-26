@@ -153,7 +153,31 @@ public class Main extends PApplet{
 		case 5:
 
 			pizza.drawpizza();
-	
+	        
+			//coca cola
+			if (clickC == 4) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 5) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 6) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
 			
 			
 			
@@ -162,7 +186,30 @@ public class Main extends PApplet{
 		case 6:
 			ravioli.drawRavioli();
 			
-			
+			//coca cola
+			if (clickC == 7) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 8) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 9) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
 			
 			
 			
@@ -172,7 +219,30 @@ public class Main extends PApplet{
 		case 7:
 			cannolis.drawCannolis();
 			
-			
+			//coca cola
+			if (clickC == 10) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 11) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 12) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
 			
 			
 			
@@ -297,6 +367,7 @@ public class Main extends PApplet{
 			createButton(179,288,640,665,8); //checkout	
 			click = 1;	
 			
+			//adiciones
 			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
 				clickC = 1;
 			}
@@ -319,7 +390,16 @@ public class Main extends PApplet{
 			createButton(179,288,640,665,8); //checkout	
 			click=2;	
 			
-			
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 4;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 5;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 6;
+			}
 			
 			
 			
@@ -333,7 +413,16 @@ public class Main extends PApplet{
 			
 			click=3;	
 				
-			
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 7;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 8;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 9;
+			}
 			
 			
 			
@@ -345,7 +434,16 @@ public class Main extends PApplet{
 			
 			click=4;	
 				
-				
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 10;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 11;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 12;
+			}	
 			
 			
 			
