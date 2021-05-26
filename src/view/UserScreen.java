@@ -7,17 +7,18 @@ import processing.core.PImage;
 public class UserScreen {
 	
 	private PApplet app;
-	private ControlP5 cp5;
 	private PImage user;
 
 
-	public UserScreen(PApplet app, ControlP5 cp5) {
+	public UserScreen(PApplet app) {
 		this.app = app;
-		this.cp5 = cp5;
 		
 		//Image
-		user = app.loadImage("./data/USER SCREEN.jpg");
+		user = app.loadImage("./data/images/user.jpg");
 		
 	}
 
+	public void draw() {
+		app.image(user, 0, 0, 323, 700);
+	}
 }
