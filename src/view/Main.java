@@ -142,7 +142,7 @@ public class Main extends PApplet{
 		
 		
 		//Variables
-		screen = 8 ;
+		screen = 0 ;
 
 		click = 0;
 
