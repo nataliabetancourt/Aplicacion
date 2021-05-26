@@ -27,12 +27,13 @@ public class Main extends PApplet{
 	
 	//Pizza
 	
+	private DishOneScreen pasta;
 	
 	
 	
 	//Pasta
 	
-	
+	private DishTwoScreen pizza;
 	
 	
 	//Ravioli
@@ -120,9 +121,9 @@ public class Main extends PApplet{
 		home = new HomeScreen(this);
 		login = new LoginScreen(this, cp5);
 		signup = new SignUpScreen(this, cp5);
+		pasta = new DishOneScreen (this);
+		pizza = new DishTwoScreen (this);
 
-		
-		
 		ravioli = new DishThreeScreen(this);
 		cannolis = new DishFourScreen(this);
 		payment = new PaymentScreen(this);
@@ -192,6 +193,7 @@ public class Main extends PApplet{
 		//Dish one screen - PASTA
 		case 4:
 			
+			pasta.draw();
 			
 			
 			
@@ -201,7 +203,7 @@ public class Main extends PApplet{
 		//Dish two screen - PIZZA
 		case 5:
 			
-			
+			pizza.draw();
 			
 			
 			
@@ -323,8 +325,10 @@ public class Main extends PApplet{
 		//Dish one screen - PASTA
 		case 4:
 			
+			createButton(16,39,36,57,3); //back
+			createButton(179,288,640,665,8); //checkout	
 			
-			
+			click=3;	
 			
 			
 			
@@ -336,8 +340,10 @@ public class Main extends PApplet{
 		//Dish two screen - PIZZA
 		case 5:
 			
+			createButton(16,39,36,57,3); //back
+			createButton(179,288,640,665,8); //checkout	
 			
-			
+			click=3;	
 			
 			
 			

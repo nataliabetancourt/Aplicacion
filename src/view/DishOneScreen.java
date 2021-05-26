@@ -1,18 +1,27 @@
 package view;
 
-import controlP5.CheckBox;
-import controlP5.ControlP5;
+//import controlP5.CheckBox;
+//import controlP5.ControlP5;
 import processing.core.PApplet;
 import processing.core.PImage;
 
 public class DishOneScreen extends Dish{
 	
-	private PImage dishOne;
+	private PApplet app;
+	private PImage pasta;
 
-	public DishOneScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
-			super(app, cp5, checkbox);
+	public DishOneScreen(PApplet app) {
+			super(app);
 			
-			dishOne = app.loadImage("./data/images//DISH pasta.jpg");
+			//this.app = app;
+			
+			pasta = app.loadImage("../data/images/DISH pasta.jpg");
 	}
 
+	public void draw() {
+		
+		app.image(pasta, 0, 0, 323, 700);
+	
+	}
+	
 }

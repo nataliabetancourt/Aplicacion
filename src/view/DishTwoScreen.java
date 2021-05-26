@@ -1,21 +1,28 @@
 package view;
 
-import controlP5.CheckBox;
-import controlP5.ControlP5;
+//import controlP5.CheckBox;
+//import controlP5.ControlP5;
 import processing.core.PApplet;
 import processing.core.PImage;
 
 public class DishTwoScreen extends Dish{
 
-	private PImage dishTwo;
+	private PApplet app;
+	private PImage pizza;
 
-	public DishTwoScreen(PApplet app, ControlP5 cp5, CheckBox checkbox) {
-			super(app, cp5, checkbox);
+	public DishTwoScreen(PApplet app) {
+			super(app);
 			
-			dishTwo = app.loadImage("./data/images//DISH pizza.png");
-			
-	}
+			pizza = app.loadImage("./data/images/DISH pizza.png");
 			
 	}
+		
+	public void draw() {
+		
+		app.image(pizza, 0, 0, 323, 700);
+	
+	}
+	
+}
 
 
