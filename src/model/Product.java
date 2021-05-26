@@ -5,19 +5,40 @@ import processing.core.PImage;
 
 public class Product {
 	
-	private PApplet app;
-	private PImage product;
-	private String name, date;
-	private int price, extra1, extra2, extra3;
+	protected PApplet app;
+	protected String name, date, img;
+	protected float price, extra1, extra2, extra3;
 
-	public Product(PApplet app, String name, String date, int price, int extra1, int extra2, int extra3) {
+	public Product(PApplet app, String name, String date, double d, double e, double f, double g, String img) {
 		this.app = app;
 		this.name = name;
 		this.date = date;
-		this.price = price;
-		this.extra1 = extra1;
-		this.extra2 = extra2;
-		this.extra3 = extra3;
+		this.price = (float) d;
+		this.extra1 = (float) e;
+		this.extra2 = (float) f;
+		this.extra3 = (float) g;
+		this.img = img;
 	}
+	
+	public float getPrice() {
+		return price;
+	}
+	
+	public String getDate() {
+		return date;
+	}
+	
+	public float getExtra1() {
+		return extra1;
+	}
+	
+	public float getExtra2() {
+		return extra2;
+	} 
+	
+	public float getExtra3() {
+		return extra3;
+	}
+	
 
 }

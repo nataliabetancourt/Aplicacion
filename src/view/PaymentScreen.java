@@ -13,10 +13,10 @@ public class PaymentScreen {
 	public PaymentScreen(PApplet app) {
 		this.app = app;
 	
-		
 		//Image
-		payment = app.loadImage("./data/images/PAY SCREEN.png");
+		payment = app.loadImage("./data/images/payscreen.jpg");
 		feedback = app.loadImage("./data/images/FEEDBACK.png");
+		
 	}
 	
 	public void drawPayment() {
