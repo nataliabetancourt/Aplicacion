@@ -8,7 +8,7 @@ public class Logic {
 	
 	private PApplet app;
 	private Product pasta, pizza, ravioli, cannolis;
-	private String dateProduct, pastaImg, pizzaImg, ravioliImg, cannolisImg;
+	private String dateProduct;
 
 	public Logic(PApplet app) {
 		this.app = app;
@@ -17,13 +17,9 @@ public class Logic {
 		
 		//Variables for products
 		dateProduct = date.toString();
-		pastaImg = "./data/images/pastaSmall.jpg";
-		pizzaImg = "./data/images/pastaSmall.jpg";
-		ravioliImg = "./data/images/pastaSmall.jpg";
-		cannolisImg = "./data/images/pastaSmall.jpg";
 		
 		//Classes
-		pasta = new Pasta(app, "pasta", dateProduct, 25.00, 2.00, 6.00, 2.25, pastaImg);
+		pasta = new Pasta(app, "pasta", dateProduct, 25.00, 2.00, 6.00, 2.25);
 	}
 
 	public Product getPasta() {

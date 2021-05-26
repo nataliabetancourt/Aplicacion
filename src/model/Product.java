@@ -6,10 +6,10 @@ import processing.core.PImage;
 public class Product {
 	
 	protected PApplet app;
-	protected String name, date, img;
+	protected String name, date;
 	protected float price, extra1, extra2, extra3;
 
-	public Product(PApplet app, String name, String date, double d, double e, double f, double g, String img) {
+	public Product(PApplet app, String name, String date, double d, double e, double f, double g) {
 		this.app = app;
 		this.name = name;
 		this.date = date;
@@ -17,7 +17,6 @@ public class Product {
 		this.extra1 = (float) e;
 		this.extra2 = (float) f;
 		this.extra3 = (float) g;
-		this.img = img;
 	}
 	
 	public float getPrice() {
@@ -38,6 +37,10 @@ public class Product {
 	
 	public float getExtra3() {
 		return extra3;
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 

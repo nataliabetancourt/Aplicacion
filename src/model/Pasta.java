@@ -5,16 +5,10 @@ import processing.core.PImage;
 
 public class Pasta extends Product{
 	
-	private PImage pasta;
+	private PImage pastaImg;
 
-	public Pasta(PApplet app, String name, String date, double d, double e, double f, double g, String img){
-		super(app, name, date, d, e, f, g, img);
-		
-		pasta = app.loadImage(img);
-		
+	public Pasta(PApplet app, String name, String date, double d, double e, double f, double g){
+		super(app, name, date, d, e, f, g);
 	}
 
-	public PImage getPasta() {
-		return pasta;
-	}
 }
