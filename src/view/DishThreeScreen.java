@@ -19,6 +19,9 @@ public class DishThreeScreen extends Dish{
 	}
 	
 	public void drawRavioli() {
+		
 		app.image(RAVIOLI, 0, 0, 323, 700);
-}
+	
+	}
+	
 }
