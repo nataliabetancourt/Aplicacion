@@ -7,15 +7,12 @@ import processing.core.PImage;
 
 public class DishOneScreen extends Dish{
 	
-
 	private PApplet app;
-
 	private PImage pasta;
 
 	public DishOneScreen(PApplet app) {
 			super(app);
 			
-
 			this.app = app;
 			
 			pasta = app.loadImage("./data/images/pasta.jpg");
@@ -24,7 +21,6 @@ public class DishOneScreen extends Dish{
 
 	public void drawpasta() {
 		app.image(pasta, 0, 0, 323, 700);
-
 	}
 	
 }

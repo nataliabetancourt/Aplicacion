@@ -27,7 +27,6 @@ public class HomeScreen {
 		
 		//Username
 		app.textFont(fontBold);
-		
 		app.text(user, 47, 166);
 		
 	}

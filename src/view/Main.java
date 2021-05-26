@@ -71,12 +71,8 @@ public class Main extends PApplet{
 		
 		
 		//Variables
-
-
 		screen = 0;
-
 		click = 0;
-		
 		clickC = 0; // circulos adiciones
         clickP = 0; // circulos payment
 		
@@ -348,6 +344,10 @@ public class Main extends PApplet{
 			
 		//Home screen
 		case 3:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			//User button
 			createButton(20, 65, 45, 90, 10);
 			//Pasta button
@@ -362,6 +362,9 @@ public class Main extends PApplet{
 			
 		//Dish one screen - PASTA
 		case 4:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
 			createButton(16,39,36,57,3); //back
 			createButton(179,288,640,665,8); //checkout	
@@ -385,6 +388,9 @@ public class Main extends PApplet{
 			
 		//Dish two screen - PIZZA
 		case 5:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
 			createButton(16,39,36,57,3); //back
 			createButton(179,288,640,665,8); //checkout	
@@ -408,6 +414,10 @@ public class Main extends PApplet{
 			
 		//Dish three screen - RAVIOLI
 		case 6:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			createButton(16,39,36,57,3); //back
 			createButton(179,288,640,665,8); //checkout	
 			
@@ -427,8 +437,13 @@ public class Main extends PApplet{
 			
 			
 			break;
+			
 		//Dish four screen - CANNOLIS
 		case 7:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			createButton(16,39,36,57,3); //back	
 			createButton(179,288,640,665,8); //checkout	
 			
@@ -448,8 +463,13 @@ public class Main extends PApplet{
 			
 			
 			break;
+			
 		//Payment screen
 		case 8:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			if (click == 1) {	
 				createButton(16,39,36,57,4); //back	
 			}
@@ -493,18 +513,24 @@ public class Main extends PApplet{
 			
 		//Feedback screen
 		case 9:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 				
 			createButton(16,39,36,57,8); //back
 			createButton(157,279,639,673,10); //history (user screen)	
 				
 			
-			
+			click = 8;
 			
 	
 			break;
 			
 		//User screen
 		case 10:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
 			createButton(16,39,36,57,8); //back
 			
@@ -524,11 +550,8 @@ public class Main extends PApplet{
 	}
 	
 	public void createButton(int x1, int x2, int y1, int y2, int screenNum) {
-		
 		if (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2) {
-			
 			screen = screenNum;
-			
 		}
 	}
 
