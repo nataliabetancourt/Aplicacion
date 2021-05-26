@@ -452,7 +452,7 @@ public class Main extends PApplet{
 		createButton(157,279,639,673,10); //history (user screen)	
 			
 			
-			
+		
 			
 			
 			break;
@@ -462,8 +462,8 @@ public class Main extends PApplet{
 			
 			createButton(16,39,36,57,8); //back
 			
-			createButton(111, 193, 247, 269, 9); //date 
-			createButton(207, 289, 247, 269, 9); //price 
+			createButton(111, 193, 247, 269, 10); //date 
+			createButton(207, 289, 247, 269, 10); //price 
 			
 			if (mouseX > 99 && mouseX < 224 && mouseY > 632 && mouseY < 671) { // sign out
 			

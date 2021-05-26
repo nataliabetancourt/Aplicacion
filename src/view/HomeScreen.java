@@ -33,7 +33,9 @@ public class HomeScreen {
 	}
 	
 	public void getUsername(String user) {
+		
 		this.user = user;
+
 	}
 
 	
