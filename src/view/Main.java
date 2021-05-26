@@ -87,7 +87,7 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-    private int click;
+    private int click, clickC, clickP;
 	private String username, password;
 	
 	
@@ -150,11 +150,13 @@ public class Main extends PApplet{
 		
 		//Variables
 
-		screen = 0 ;
+		screen = 0;
 
 
 		click = 0;
-
+		
+		clickC = 0; // circulos adiciones
+        clickP = 0; // circulos payment
 		
 		
 	
@@ -199,24 +201,24 @@ public class Main extends PApplet{
 		case 4:
 
 			pasta.drawpasta();
-			
-			if (click == 1) {
+			//coca cola
+			if (clickC == 1) {
 				
 				noStroke();
 				fill (43,90,82); 
 				ellipse (95,574,12,12);
 				
 				}
-			
-			if (click == 2) {
+			//salad
+			if (clickC == 2) {
 					
 				noStroke();
 				fill (43,90,82); 
 				ellipse (190,574,12,12);
 					
 			}
-			
-			if (click == 3) {
+			//pan
+			if (clickC == 3) {
 				
 				noStroke();
 				fill (43,90,82); 
@@ -257,12 +259,14 @@ public class Main extends PApplet{
 		//Payment screen
 		case 8:
 			payment.drawPayment();
-			if (click == 5) {
+			//cash
+			if (clickP == 1) {
 			noStroke();
 			fill (43,90,82); 
 			ellipse (257,455,20,20);
 			}
-			if (click == 6) {
+			//credit
+			if (clickP == 2) {
 				noStroke();
 				fill (43,90,82); 
 				ellipse (257,542,20,20);
@@ -371,15 +375,15 @@ public class Main extends PApplet{
 			createButton(179,288,640,665,8); //checkout	
 			click = 1;	
 			
-//			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
-//				click = 1;
-//			}
-//			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
-//				click = 2;
-//			}
-//			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
-//				click = 3;
-//			}
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 1;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 2;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 3;
+			}
 			
 			
 			
@@ -446,12 +450,12 @@ public class Main extends PApplet{
 		
 		
 		
-		//fill checkbox
+		//fill checkbox payment
 		if (mouseX > 248 && mouseX < 266 && mouseY > 447 && mouseY < 463) {	
-			click = 5;
+			clickP = 1;
 		}
 		if (mouseX > 248 && mouseX < 266 && mouseY > 534 && mouseY < 550) {	
-			click = 6;
+			clickP = 2;
 		}
 		
 		
