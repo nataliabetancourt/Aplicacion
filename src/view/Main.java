@@ -11,93 +11,23 @@ public class Main extends PApplet{
 	//View classes
 	private HomeScreen home;
 	private IntroScreen intro;
-	//Login
 	private LoginScreen login;
-	
-	
-	
-	
-	//Signup
 	private SignUpScreen signup;
-	
-	
-	
-	//Pizza
-
-	
 	private DishOneScreen pasta;
-
 	private DishTwoScreen pizza;
-
-	
-	
-	
-	//Pasta
-
-	
-	
-	//Ravioli
 	private DishThreeScreen ravioli;
-	
-	
-	
-	
-	//Cannolis
 	private DishFourScreen cannolis;
-	
-	
-	
-	
-	//Payscreen
 	private PaymentScreen payment;
-	
-	
-	
-	
-	
-	//Feedback
 	private FeedbackScreen feedback;
-	
-	
-	
-	//User
 	private UserScreen user;
-	
-	
-	
-	
 
-	
 	//Controllers
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	//Variables
 	private int screen;
     private int click, clickC, clickP;
 	private String username, password;
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	public static void main(String[] args) {
@@ -121,22 +51,14 @@ public class Main extends PApplet{
 		home = new HomeScreen(this);
 		login = new LoginScreen(this, cp5);
 		signup = new SignUpScreen(this, cp5);
-
 		pasta = new DishOneScreen (this);
 		pizza = new DishTwoScreen (this);
-
-
 		ravioli = new DishThreeScreen(this);
 		cannolis = new DishFourScreen(this);
 		payment = new PaymentScreen(this);
 		feedback = new FeedbackScreen(this);
 		user = new UserScreen(this);
-		
-		
-		
-		
-		
-		
+
 		//Controllers
 		
 		
@@ -150,8 +72,8 @@ public class Main extends PApplet{
 		
 		//Variables
 
-		screen = 0;
 
+		screen = 0;
 
 		click = 0;
 		
@@ -353,9 +275,9 @@ public class Main extends PApplet{
 			}
 
 			break;
+			
 		//Home screen
 		case 3:
-			
 			//User button
 			createButton(20, 65, 45, 90, 10);
 			//Pasta button
@@ -389,6 +311,7 @@ public class Main extends PApplet{
 			
 			
 			break;
+			
 		//Dish two screen - PIZZA
 		case 5:
 			
@@ -402,13 +325,14 @@ public class Main extends PApplet{
 			
 			
 			break;
+			
 		//Dish three screen - RAVIOLI
 		case 6:
-		createButton(16,39,36,57,3); //back
-		createButton(179,288,640,665,8); //checkout	
-		
-		click=3;	
+			createButton(16,39,36,57,3); //back
+			createButton(179,288,640,665,8); //checkout	
 			
+			click=3;	
+				
 			
 			
 			
@@ -416,30 +340,39 @@ public class Main extends PApplet{
 			break;
 		//Dish four screen - CANNOLIS
 		case 7:
-		createButton(16,39,36,57,3); //back	
-		createButton(179,288,640,665,8); //checkout	
-		
-		click=4;	
+			createButton(16,39,36,57,3); //back	
+			createButton(179,288,640,665,8); //checkout	
 			
-			
+			click=4;	
+				
+				
 			
 			
 			
 			break;
 		//Payment screen
 		case 8:
-		if (click == 1) {	
-			createButton(16,39,36,57,4); //back	
-		}
+			if (click == 1) {	
+				createButton(16,39,36,57,4); //back	
+			}
+				
+				
+		    if (click == 2) {	
+				createButton(16,39,36,57,5); //back	
+			}
+				
+			if (click == 3) {
+				createButton(16,39,36,57,6); //back		
+			}	
+				
+			if (click == 4) {	
+				createButton(16,39,36,57,7); //back	
+			}	
+	
+			
+			createButton(99,222,636,671,9); //finish
 			
 			
-	    if (click == 2) {	
-			createButton(16,39,36,57,5); //back	
-		}
-			
-		if (click == 3) {
-			createButton(16,39,36,57,6); //back		
-		}	
 			
 		if (click == 4) {	
 			createButton(16,39,36,57,7); //back	
@@ -458,19 +391,18 @@ public class Main extends PApplet{
 			clickP = 2;
 		}
 		
-		
 			break;
 			
 		//Feedback screen
 		case 9:
-			
-		createButton(16,39,36,57,8); //back
-		createButton(157,279,639,673,10); //history (user screen)	
-			
-			
-			
+				
+			createButton(16,39,36,57,8); //back
+			createButton(157,279,639,673,10); //history (user screen)	
+				
 			
 			
+			
+	
 			break;
 			
 		//User screen
