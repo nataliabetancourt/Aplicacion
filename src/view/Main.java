@@ -196,13 +196,7 @@ public class Main extends PApplet{
 		case 7:
 			cannolis.drawCannolis();
 			
-<<<<<<< HEAD
 
-			
-			
-			
-			
-=======
 			//coca cola
 			if (clickC == 10) {
 				
@@ -227,7 +221,6 @@ public class Main extends PApplet{
 				ellipse (283,574,12,12);
 					
 			}
->>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
 			
 			break;
 		//Payment screen
@@ -380,19 +373,34 @@ public class Main extends PApplet{
 			signup.hideText();
 			
 			createButton(16,39,36,57,3); //back
-			createButton(179,288,640,665,8); //checkout	
+			//createButton(179,288,640,665,8); //checkout	
 			click=2;	
 			
-			//adiciones
+			//Checkout
+			if (mouseX > 179 && mouseX < 288 && mouseY > 640 && mouseY < 665) {
+				screen = 8;
+				payment.receiveInfo(pizza.getTotal(), pizza.getProductName());
+				product = 2;
+			}
+			
+			//Extra 1
 			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
-				clickC = 4;
+				clickC = 1;
+				pizza.totalPrice(1);
 			}
+			
+			//Extra 2
 			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
-				clickC = 5;
+				clickC = 2;
+				pizza.totalPrice(2);
 			}
+			
+			//Extra 3
 			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
-				clickC = 6;
+				clickC = 3;
+				pizza.totalPrice(3);
 			}
+			
 			
 			
 			
@@ -504,7 +512,7 @@ public class Main extends PApplet{
 			
 		//Feedback screen
 		case 9:
-<<<<<<< HEAD
+
 
 			
 		createButton(16,39,36,57,8); //back
@@ -513,22 +521,18 @@ public class Main extends PApplet{
 			
 		
 
-=======
+
 			//Hide text boxes 
 			login.hideText();
 			signup.hideText();
->>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
+
 				
 			createButton(16,39,36,57,8); //back
 			createButton(157,279,639,673,10); //history (user screen)	
 				
-			
-<<<<<<< HEAD
 
-			
-=======
 			click = 8;
->>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
+
 			
 	
 			break;

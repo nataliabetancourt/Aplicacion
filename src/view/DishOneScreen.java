@@ -8,10 +8,14 @@ import processing.core.PImage;
 public class DishOneScreen extends Dish{
 	
 	private PApplet app;
+	
 	private PImage pasta, pastaSmall;
-	private float total, basicPrice, extra1Price, extra2Price, extra3Price;
+	
 	private String productName;
-
+	
+	private float total, basicPrice, extra1Price, extra2Price, extra3Price;
+	
+	
 	public DishOneScreen(PApplet app) {
 			super(app);
 			

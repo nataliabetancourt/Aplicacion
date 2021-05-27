@@ -19,11 +19,19 @@ public class Logic {
 		dateProduct = date.toString();
 		
 		//Classes
-		pasta = new Pasta(app, "pasta", dateProduct, 25.00, 2.00, 6.00, 2.25);
+		pasta = new Pasta (app, "pasta", dateProduct, 25.00, 2.00, 6.00, 2.25);
+		pizza = new Pizza (app, "pizza", dateProduct, 45.00, 2.00, 6.00, 2.25);
+				
 	}
 
 	public Product getPasta() {
 		return pasta;
 	}
+	
+	public Product getPizza() {
+		return pizza;
+	}
+	
+	
 	
 }

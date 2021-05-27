@@ -10,6 +10,7 @@ public class Product {
 	protected float price, extra1, extra2, extra3;
 
 	public Product(PApplet app, String name, String date, double d, double e, double f, double g) {
+		
 		this.app = app;
 		this.name = name;
 		this.date = date;
@@ -17,6 +18,7 @@ public class Product {
 		this.extra1 = (float) e;
 		this.extra2 = (float) f;
 		this.extra3 = (float) g;
+		
 	}
 	
 	public float getPrice() {
