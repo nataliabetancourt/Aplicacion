@@ -22,7 +22,7 @@ public class LoginScreen {
 		this.cp5 = cp5;
 
 		// Image
-		login = app.loadImage("./data/images/login.jpg");
+		login = app.loadImage("./data/images/LOG IN SCREEN.jpg");
 		
 		//Fonts
 		font = app.createFont("./data/fonts/Poppins-Regular.ttf", 14);
