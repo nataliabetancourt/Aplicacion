@@ -71,10 +71,15 @@ public class Main extends PApplet{
 		
 		
 		//Variables
-		screen = 0;
+		
+		screen = 0;//pantallas
+		
 		click = 0;
+		
+		//checkboxes
 		clickC = 0; // circulos adiciones
         clickP = 0; // circulos payment
+        
         product = 0;
 		
 		
@@ -243,11 +248,15 @@ public class Main extends PApplet{
 			break;
 		//Feedback screen
 		case 9:
+			
 			feedback.drawFeedback();
+			
 			break;
 		//User screen
 		case 10:
+			
 			user.draw();
+			
 			break;
 		}
 		
@@ -385,19 +394,19 @@ public class Main extends PApplet{
 			
 			//Extra 1
 			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
-				clickC = 1;
+				clickC = 4;
 				pizza.totalPrice(1);
 			}
 			
 			//Extra 2
 			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
-				clickC = 2;
+				clickC = 5;
 				pizza.totalPrice(2);
 			}
 			
 			//Extra 3
 			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
-				clickC = 3;
+				clickC = 6;
 				pizza.totalPrice(3);
 			}
 			
@@ -513,25 +522,21 @@ public class Main extends PApplet{
 		//Feedback screen
 		case 9:
 
-
-			
-		createButton(16,39,36,57,8); //back
-		createButton(157,279,639,673,10); //history (user screen)	
-			
-			
-		
-
-
 			//Hide text boxes 
 			login.hideText();
 			signup.hideText();
 
 				
 			createButton(16,39,36,57,8); //back
+			
+			
+			if (mouseX > 157 && mouseX < 279 && mouseY > 639 && mouseY < 673) {
+				screen = 10;
+				user.receiveInfo(product);
+			}
+			
 			createButton(157,279,639,673,10); //history (user screen)	
-				
-
-			click = 8;
+			//click = 8;
 
 			
 	
@@ -547,9 +552,16 @@ public class Main extends PApplet{
 			
 			createButton(111, 193, 247, 269, 10); //date 
 			createButton(207, 289, 247, 269, 10); //price 
+				
+			
+			
+
+			//finish
 			
 			if (mouseX > 99 && mouseX < 224 && mouseY > 632 && mouseY < 671) { // sign out
-				exit();
+				
+				screen = 1;
+				//exit();
 			}
 			
 			

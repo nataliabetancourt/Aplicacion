@@ -16,8 +16,10 @@ public class FeedbackScreen {
 	}
 
 	public void drawFeedback() {
+		
 		app.image(feedback, 0, 0, 323, 700);
 		app.image(product, 50, 128, 226, 112);
+		
 	}
 	
 	public void receiveInfo(int productNum) {
