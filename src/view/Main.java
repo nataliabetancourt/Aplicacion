@@ -26,7 +26,7 @@ public class Main extends PApplet{
 	
 	//Variables
 	private int screen;
-    private int click;
+    private int click, clickC, clickP, product;
 	private String username, password;
 	
 	
@@ -71,10 +71,11 @@ public class Main extends PApplet{
 		
 		
 		//Variables
-
-		screen = 0 ;
+		screen = 0;
 		click = 0;
-
+		clickC = 0; // circulos adiciones
+        clickP = 0; // circulos payment
+        product = 0;
 		
 		
 	
@@ -89,27 +90,14 @@ public class Main extends PApplet{
 		//Intro screen
 		case 0:
 			intro.draw();
-			
-			
-			
-			
 			break;
 		//Login screen
 		case 1:
 			login.draw();
-			
-			
-			
-			
-			
 			break;
 		//Sign up screen
 		case 2:
 			signup.draw();
-			
-			
-			
-			
 			break;
 		//Home screen
 		case 3:
@@ -117,26 +105,25 @@ public class Main extends PApplet{
 			break;
 		//Dish one screen - PASTA
 		case 4:
-
 			pasta.drawpasta();
-			
-			if (click == 1) {
+			//coca cola
+			if (clickC == 1) {
 				
 				noStroke();
 				fill (43,90,82); 
 				ellipse (95,574,12,12);
 				
 				}
-			
-			if (click == 2) {
+			//salad
+			if (clickC == 2) {
 					
 				noStroke();
 				fill (43,90,82); 
 				ellipse (190,574,12,12);
 					
 			}
-			
-			if (click == 3) {
+			//pan
+			if (clickC == 3) {
 				
 				noStroke();
 				fill (43,90,82); 
@@ -147,43 +134,113 @@ public class Main extends PApplet{
 			break;
 		//Dish two screen - PIZZA
 		case 5:
-
 			pizza.drawpizza();
-	
-			
-			
+
+			//coca cola
+			if (clickC == 4) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 5) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 6) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
 			
 			break;
 		//Dish three screen - RAVIOLI
 		case 6:
 			ravioli.drawRavioli();
 			
-			
-			
-			
-			
+			//coca cola
+			if (clickC == 7) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 8) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 9) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
 			
 			break;
 		//Dish four screen - CANNOLIS
 		case 7:
 			cannolis.drawCannolis();
 			
+<<<<<<< HEAD
 
 			
 			
 			
 			
+=======
+			//coca cola
+			if (clickC == 10) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (95,574,12,12);
+				
+				}
+			//salad
+			if (clickC == 11) {
+					
+				noStroke();
+				fill (43,90,82); 
+				ellipse (190,574,12,12);
+					
+			}
+			//pan
+			if (clickC == 12) {
+				
+				noStroke();
+				fill (43,90,82); 
+				ellipse (283,574,12,12);
+					
+			}
+>>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
 			
 			break;
 		//Payment screen
 		case 8:
 			payment.drawPayment();
-			if (click == 5) {
+			//cash
+			if (clickP == 1) {
 			noStroke();
 			fill (43,90,82); 
 			ellipse (257,455,20,20);
 			}
-			if (click == 6) {
+			//credit
+			if (clickP == 2) {
 				noStroke();
 				fill (43,90,82); 
 				ellipse (257,542,20,20);
@@ -194,30 +251,21 @@ public class Main extends PApplet{
 		//Feedback screen
 		case 9:
 			feedback.drawFeedback();
-			
-			
-			
-			
-			
-			
 			break;
 		//User screen
 		case 10:
 			user.draw();
-			
-			
-			
-			
-			
 			break;
 		}
-		System.out.println(mouseX + "," + mouseY);
+		
+		//System.out.println(mouseX + "," + mouseY);
 	}
 	
 	public void mousePressed() {
 		
 		//Screens
 		switch (screen) {
+		
 		//Intro screen
 		case 0:
 			createButton(0, 323, 0, 700, 1);
@@ -273,6 +321,10 @@ public class Main extends PApplet{
 			
 		//Home screen
 		case 3:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			//User button
 			createButton(20, 65, 45, 90, 10);
 			//Pasta button
@@ -287,34 +339,60 @@ public class Main extends PApplet{
 			
 		//Dish one screen - PASTA
 		case 4:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
 			createButton(16,39,36,57,3); //back
-			createButton(179,288,640,665,8); //checkout	
 			click = 1;	
+
+			//Checkout
+			if (mouseX > 179 && mouseX < 288 && mouseY > 640 && mouseY < 665) {
+				screen = 8;
+				payment.receiveInfo(pasta.getTotal(), pasta.getProductName());
+				product = 1;
+			}
 			
-//			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
-//				click = 1;
-//			}
-//			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
-//				click = 2;
-//			}
-//			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
-//				click = 3;
-//			}
+			//Extra 1
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 1;
+				pasta.totalPrice(1);
+			}
 			
+			//Extra 2
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 2;
+				pasta.totalPrice(2);
+			}
 			
-			
+			//Extra 3
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 3;
+				pasta.totalPrice(3);
+			}
 			
 			break;
 			
 		//Dish two screen - PIZZA
 		case 5:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
 			createButton(16,39,36,57,3); //back
 			createButton(179,288,640,665,8); //checkout	
 			click=2;	
 			
-			
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 4;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 5;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 6;
+			}
 			
 			
 			
@@ -323,30 +401,62 @@ public class Main extends PApplet{
 			
 		//Dish three screen - RAVIOLI
 		case 6:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			createButton(16,39,36,57,3); //back
 			createButton(179,288,640,665,8); //checkout	
 			
 			click=3;	
 				
-			
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 7;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 8;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 9;
+			}
 			
 			
 			
 			break;
+			
 		//Dish four screen - CANNOLIS
 		case 7:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			createButton(16,39,36,57,3); //back	
 			createButton(179,288,640,665,8); //checkout	
 			
 			click=4;	
 				
-				
+			//adiciones
+			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
+				clickC = 10;
+			}
+			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
+				clickC = 11;
+			}
+			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
+				clickC = 12;
+			}	
 			
 			
 			
 			break;
+			
 		//Payment screen
 		case 8:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+			
 			if (click == 1) {	
 				createButton(16,39,36,57,4); //back	
 			}
@@ -364,24 +474,37 @@ public class Main extends PApplet{
 				createButton(16,39,36,57,7); //back	
 			}	
 	
-			
-			createButton(99,222,636,671,9); //finish
-			
-			
-			
-			//fill checkbox
-			if (mouseX > 248 && mouseX < 266 && mouseY > 447 && mouseY < 463) {	
-				click = 5;
-			}
-			if (mouseX > 248 && mouseX < 266 && mouseY > 534 && mouseY < 550) {	
-				click = 6;
+
+			//finish
+			if (mouseX > 99 && mouseX < 222 && mouseY > 636 && mouseY < 671) {
+				screen = 9;
+				feedback.receiveInfo(product);
 			}
 			
+			
+			
+		if (click == 4) {	
+			createButton(16,39,36,57,7); //back	
+		}	
+
+		
+		createButton(99,222,636,671,9); //finish
+		
+		
+		
+		//fill checkbox payment
+		if (mouseX > 248 && mouseX < 266 && mouseY > 447 && mouseY < 463) {	
+			clickP = 1;
+		}
+		if (mouseX > 248 && mouseX < 266 && mouseY > 534 && mouseY < 550) {	
+			clickP = 2;
+		}
 		
 			break;
 			
 		//Feedback screen
 		case 9:
+<<<<<<< HEAD
 
 			
 		createButton(16,39,36,57,8); //back
@@ -390,29 +513,39 @@ public class Main extends PApplet{
 			
 		
 
+=======
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
+>>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
 				
 			createButton(16,39,36,57,8); //back
 			createButton(157,279,639,673,10); //history (user screen)	
 				
 			
+<<<<<<< HEAD
 
 			
+=======
+			click = 8;
+>>>>>>> 69373d9e289a985d97a4abde6b6ea125487beb39
 			
 	
 			break;
 			
 		//User screen
 		case 10:
+			//Hide text boxes 
+			login.hideText();
+			signup.hideText();
 			
-			createButton(16,39,36,57,8); //back
+			createButton(16,39,36,57,3); //back
 			
 			createButton(111, 193, 247, 269, 10); //date 
 			createButton(207, 289, 247, 269, 10); //price 
 			
 			if (mouseX > 99 && mouseX < 224 && mouseY > 632 && mouseY < 671) { // sign out
-			
 				exit();
-			
 			}
 			
 			
@@ -422,11 +555,8 @@ public class Main extends PApplet{
 	}
 	
 	public void createButton(int x1, int x2, int y1, int y2, int screenNum) {
-		
 		if (mouseX > x1 && mouseX < x2 && mouseY > y1 && mouseY < y2) {
-			
 			screen = screenNum;
-			
 		}
 	}
 
