@@ -33,9 +33,13 @@ public class PaymentScreen {
 		
 }
 	public void drawF() {
+<<<<<<< HEAD
 		
 		app.image(feedback, 43, 582);
 		
+=======
+		app.image(feedback, 43, 582, 236, 40);
+>>>>>>> 595af2a622b2fdd594c3ebed74fbd8b9460da7ab
 	}
 	
 	public void receiveInfo(float total, String name) {

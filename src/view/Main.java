@@ -260,7 +260,7 @@ public class Main extends PApplet{
 			break;
 		}
 		
-		//System.out.println(mouseX + "," + mouseY);
+		System.out.println(mouseX + "," + mouseY);
 	}
 	
 	public void mousePressed() {
@@ -427,15 +427,31 @@ public class Main extends PApplet{
 			
 			click=3;	
 				
-			//adiciones
+
+			
+			//Checkout
+			if (mouseX > 179 && mouseX < 288 && mouseY > 640 && mouseY < 665) {
+				screen = 8;
+				payment.receiveInfo(ravioli.getTotal(), ravioli.getProductName());
+				product = 3;
+			}
+			
+			//Extra 1
 			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
 				clickC = 7;
+				ravioli.totalPrice(1);
 			}
+			
+			//Extra 2
 			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
 				clickC = 8;
+				ravioli.totalPrice(2);
 			}
+			
+			//Extra 3
 			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
 				clickC = 9;
+				ravioli.totalPrice(3);
 			}
 			
 			
@@ -453,16 +469,32 @@ public class Main extends PApplet{
 			
 			click=4;	
 				
-			//adiciones
+
+			//Checkout
+			if (mouseX > 179 && mouseX < 288 && mouseY > 640 && mouseY < 665) {
+				screen = 8;
+				payment.receiveInfo(cannolis.getTotal(), cannolis.getProductName());
+				product = 4;
+			}
+			
+			//Extra 1
 			if (mouseX > 87 && mouseX < 102 && mouseY > 566 && mouseY < 581) {	
 				clickC = 10;
+				cannolis.totalPrice(1);
 			}
+			
+			//Extra 2
 			if (mouseX > 182 && mouseX < 197 && mouseY > 566 && mouseY < 581) {	
 				clickC = 11;
+				cannolis.totalPrice(2);
 			}
+			
+			//Extra 3
 			if (mouseX > 275 && mouseX < 290 && mouseY > 566 && mouseY < 581) {	
 				clickC = 12;
-			}	
+				cannolis.totalPrice(3);
+			}
+			
 			
 			
 			
@@ -477,7 +509,6 @@ public class Main extends PApplet{
 			if (click == 1) {	
 				createButton(16,39,36,57,4); //back	
 			}
-				
 				
 		    if (click == 2) {	
 				createButton(16,39,36,57,5); //back	

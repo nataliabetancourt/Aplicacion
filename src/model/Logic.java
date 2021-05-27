@@ -21,7 +21,8 @@ public class Logic {
 		//Classes
 		pasta = new Pasta (app, "pasta", dateProduct, 25.00, 2.00, 6.00, 2.25);
 		pizza = new Pizza (app, "pizza", dateProduct, 45.00, 2.00, 6.00, 2.25);
-				
+		ravioli = new Ravioli(app, "ravioli", dateProduct, 28.00, 2.00, 6.00, 2.25);
+		cannolis = new Cannolis(app, "cannolis", dateProduct, 18.00, 3.00, 3.00, 2.15);	
 	}
 
 	public Product getPasta() {
@@ -30,6 +31,14 @@ public class Logic {
 	
 	public Product getPizza() {
 		return pizza;
+	}
+	
+	public Product getRavioli() {
+		return ravioli;
+	}
+	
+	public Product getCannolis() {
+		return cannolis;
 	}
 	
 	
