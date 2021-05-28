@@ -457,6 +457,7 @@ public class Main extends PApplet{
 			
 			
 			break;
+
 			
 		//Dish four screen - CANNOLIS
 		case 7:
@@ -527,6 +528,7 @@ public class Main extends PApplet{
 			if (mouseX > 99 && mouseX < 222 && mouseY > 636 && mouseY < 671) {
 				screen = 9;
 				feedback.receiveInfo(product);
+				user.addProduct(product, payment.getTotal(), payment.getDateProduct());
 			}
 			
 			
@@ -560,12 +562,6 @@ public class Main extends PApplet{
 				
 			createButton(16,39,36,57,8); //back
 			
-			
-			if (mouseX > 157 && mouseX < 279 && mouseY > 639 && mouseY < 673) {
-				screen = 10;
-				user.receiveInfo(product);
-			}
-			
 			createButton(157,279,639,673,10); //history (user screen)	
 			//click = 8;
 
@@ -575,24 +571,26 @@ public class Main extends PApplet{
 			
 		//User screen
 		case 10:
+			
 			//Hide text boxes 
 			login.hideText();
 			signup.hideText();
+			
+			
 			
 			createButton(16,39,36,57,3); //back
 			
 			createButton(111, 193, 247, 269, 10); //date 
 			createButton(207, 289, 247, 269, 10); //price 
 				
-			
-			
+				
 
 			//finish
 			
 			if (mouseX > 99 && mouseX < 224 && mouseY > 632 && mouseY < 671) { // sign out
 				
 				screen = 1;
-				//exit();
+				
 			}
 			
 			

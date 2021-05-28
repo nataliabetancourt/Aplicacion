@@ -3,7 +3,7 @@ package model;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Product {
+public class Product implements Comparable<Product> {
 	
 	protected PApplet app;
 	protected String name, date;
@@ -44,6 +44,18 @@ public class Product {
 	public String getName() {
 		return name;
 	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	@Override
+	public int compareTo(Product o) {
+		
+		return this.name.compareTo(o.getName());
+		
+	}
+	
 	
 
 }

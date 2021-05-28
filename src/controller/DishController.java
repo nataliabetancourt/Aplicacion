@@ -9,6 +9,7 @@ public class DishController {
 	private Logic logic;
 
 	public DishController(PApplet app) {
+		
 		this.app = app;
 		
 		logic = new Logic(app);

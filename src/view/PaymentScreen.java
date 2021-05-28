@@ -1,6 +1,10 @@
 package view;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import controller.PaymentController;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -13,10 +17,19 @@ public class PaymentScreen {
 	private PImage product;
 	private PFont font;
 	private float total;
+	private String dateProduct;
+	private PaymentController controller;
 
 	public PaymentScreen(PApplet app) {
 		this.app = app;
 	
+		String pattern = "MM-dd-yyyy";
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		dateProduct = simpleDateFormat.format(new Date());
+		
+		controller = new PaymentController(app);
+		
+		
 		//Image
 		payment = app.loadImage("./data/images/payscreen.jpg");
 		feedback = app.loadImage("./data/images/feedbackSign.png");
@@ -33,34 +46,58 @@ public class PaymentScreen {
 		
 }
 	public void drawF() {
-<<<<<<< HEAD
+
 		
-		app.image(feedback, 43, 582);
-		
-=======
 		app.image(feedback, 43, 582, 236, 40);
->>>>>>> 595af2a622b2fdd594c3ebed74fbd8b9460da7ab
+		
 	}
 	
 	public void receiveInfo(float total, String name) {
+		
 		this.total = total;
 		
 		if (name.equals("pasta")) {
+			
+			controller.getLogic().getPasta().setDate(dateProduct);
 			product = app.loadImage("./data/images/pastaSmall.jpg");
 		}
 		
 		if (name.equals("pizza")) {
+			
+			controller.getLogic().getPizza().setDate(dateProduct);
 			product = app.loadImage("./data/images/pizzaSmall.jpg");
 		}
 		
 		if (name.equals("ravioli")) {
+			
+			controller.getLogic().getRavioli().setDate(dateProduct);
 			product = app.loadImage("./data/images/ravioliSmall.jpg");
 		}
 		
 		if (name.equals("cannolis")) {
+			
+			controller.getLogic().getCannolis().setDate(dateProduct);
 			product = app.loadImage("./data/images/cannolisSmall.jpg");
 		}
 
 	}
+
+	public float getTotal() {
+		return total;
+	}
+
+	public void setTotal(float total) {
+		this.total = total;
+	}
+
+	public String getDateProduct() {
+		return dateProduct;
+	}
+
+	public void setDateProduct(String dateProduct) {
+		this.dateProduct = dateProduct;
+	}
+	
+	
 
 }
