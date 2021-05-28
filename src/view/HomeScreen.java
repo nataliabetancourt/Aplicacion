@@ -15,7 +15,7 @@ public class HomeScreen {
 		this.app = app;
 		
 		//Image
-		this.home = app.loadImage("./data/images/Home.jpg");
+		this.home = app.loadImage("./data/images/HOME SCREEN.jpg");
 		
 		//Font
 		this.fontBold = app.createFont("./data/fonts/Poppins-SemiBold.ttf", 22);

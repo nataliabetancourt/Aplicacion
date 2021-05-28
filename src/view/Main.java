@@ -509,18 +509,22 @@ public class Main extends PApplet{
 			
 			if (click == 1) {	
 				createButton(16,39,36,57,4); //back	
+				clickP = 0;
 			}
 				
 		    if (click == 2) {	
 				createButton(16,39,36,57,5); //back	
+				clickP = 0;
 			}
 				
 			if (click == 3) {
-				createButton(16,39,36,57,6); //back		
+				createButton(16,39,36,57,6); //back	
+				clickP = 0;
 			}	
 				
 			if (click == 4) {	
 				createButton(16,39,36,57,7); //back	
+				clickP = 0;
 			}	
 	
 

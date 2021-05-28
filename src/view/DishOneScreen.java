@@ -21,7 +21,7 @@ public class DishOneScreen extends Dish{
 			
 			this.app = app;
 			
-			pasta = app.loadImage("./data/images/pasta.jpg");
+			pasta = app.loadImage("./data/images/PASTA.png");
 			
 			basicPrice = controller.getLogic().getPasta().getPrice();
 			extra1Price = controller.getLogic().getPasta().getExtra1();

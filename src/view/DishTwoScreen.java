@@ -22,7 +22,7 @@ public class DishTwoScreen extends Dish{
 			
 			this.app = app;
 			
-			pizza = app.loadImage("./data/images/pizza.jpg");
+			pizza = app.loadImage("./data/images/PIZZA.png");
 			
 			basicPrice = controller.getLogic().getPizza().getPrice();
 			extra1Price = controller.getLogic().getPizza().getExtra1();
