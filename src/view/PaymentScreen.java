@@ -59,24 +59,32 @@ public class PaymentScreen {
 		if (name.equals("pasta")) {
 			
 			controller.getLogic().getPasta().setDate(dateProduct);
+			controller.getLogic().getPasta().setPrice(total);
+			
 			product = app.loadImage("./data/images/pastaSmall.jpg");
 		}
 		
 		if (name.equals("pizza")) {
 			
 			controller.getLogic().getPizza().setDate(dateProduct);
+			controller.getLogic().getPizza().setPrice(total);
+			
 			product = app.loadImage("./data/images/pizzaSmall.jpg");
 		}
 		
 		if (name.equals("ravioli")) {
 			
 			controller.getLogic().getRavioli().setDate(dateProduct);
+			controller.getLogic().getRavioli().setPrice(total);
+			
 			product = app.loadImage("./data/images/ravioliSmall.jpg");
 		}
 		
 		if (name.equals("cannolis")) {
 			
 			controller.getLogic().getCannolis().setDate(dateProduct);
+			controller.getLogic().getCannolis().setPrice(total);
+			
 			product = app.loadImage("./data/images/cannolisSmall.jpg");
 		}
 

@@ -576,14 +576,20 @@ public class Main extends PApplet{
 			login.hideText();
 			signup.hideText();
 			
-			
-			
 			createButton(16,39,36,57,3); //back
 			
-			createButton(111, 193, 247, 269, 10); //date 
-			createButton(207, 289, 247, 269, 10); //price 
 				
+			if (mouseX > 111 && mouseX < 193 && mouseY > 247 && mouseY < 269) { // date
 				
+				user.organizedDate();
+				
+			}
+			
+			if (mouseX > 207 && mouseX < 289 && mouseY > 247 && mouseY < 269) { // price
+				
+				user.organizedTotal();
+				
+			}
 
 			//finish
 			

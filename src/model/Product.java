@@ -55,6 +55,10 @@ public class Product implements Comparable<Product> {
 		return this.name.compareTo(o.getName());
 		
 	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
 	
 	
 
